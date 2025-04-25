@@ -21,3 +21,7 @@ class LoginPage(BasePage):
     def tap_login_button(self):
         self.login_button.click()
 
+    def login_success(self, username, password):
+        self.type_username_field(username)
+        self.type_password_field(password)
+        self.tap_login_button()
